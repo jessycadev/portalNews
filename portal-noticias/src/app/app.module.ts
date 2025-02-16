@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { HeaderComponent } from './header/header.component';
-
+import { HttpClient, provideHttpClient } from '@angular/common/http';
 
 
 @NgModule({
@@ -14,6 +14,10 @@ import { HeaderComponent } from './header/header.component';
   ],
   imports: [
     BrowserModule,
+    HttpClient
+  ],
+  providers:[ 
+    provideHttpClient()
   ],
   bootstrap: [AppComponent],
 })
