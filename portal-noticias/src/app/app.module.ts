@@ -3,22 +3,28 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { HeaderComponent } from './header/header.component';
-import { HttpClient, provideHttpClient } from '@angular/common/http';
+import { provideHttpClient } from '@angular/common/http';
+import { ProdutoComponent } from './componentes/produto/produto.component';
+import { ReactiveFormsModule,FormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [
-    AppComponent,
-    LoginComponent,
-    HeaderComponent
+
   ],
   imports: [
     BrowserModule,
-    HttpClient
+    AppComponent,
+    LoginComponent,
+    HeaderComponent,
+    ProdutoComponent,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers:[ 
     provideHttpClient()
   ],
-  bootstrap: [AppComponent],
+  exports:[HeaderComponent],
+  // bootstrap: [AppComponent],
 })
 export class AppModule { }
