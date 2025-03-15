@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Produto } from '../../models/produto';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+import { ProdutoService } from '../../serivces/produto.service';
 
 @Component({
   selector: 'app-produto',
@@ -10,10 +11,10 @@ import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } 
 })
 export class ProdutoComponent implements OnInit {
 
-  produto: Produto[] = [];
   formularioProduto: FormGroup;
+  produto!: Produto;
 
-  constructor(private fb: FormBuilder){
+  constructor(private fb: FormBuilder, private produtoService: ProdutoService){
     this.formularioProduto = this.fb.group({
       nome: ['', Validators.required],
       descricao: ['', Validators.required],
@@ -22,11 +23,18 @@ export class ProdutoComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    
   }
 
   postarFormulario(){
     console.log(this.formularioProduto);
+  }
+
+  salvarProduto(): void {
+    if(this.formularioProduto.valid) {
+      this.produto = this.formularioProduto.getRawValue();
+      this.produtoService.salvar(this.produto).subscribe(() => {
+      });
+    }
   }
 
 }
