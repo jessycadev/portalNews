@@ -12,4 +12,4 @@ import { AppModule } from '../app.module';
   exports: [
   ]
 })
-export class HeaderModule { }
+export class SiderbarModule { }

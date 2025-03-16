@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AppModule } from '../app.module';
 
 
 
@@ -8,8 +7,6 @@ import { AppModule } from '../app.module';
   declarations: [],
   imports: [
     CommonModule
-  ],
-  exports: [
   ]
 })
-export class HeaderModule { }
+export class ProdutoModule { }

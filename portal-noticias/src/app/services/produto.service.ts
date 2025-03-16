@@ -12,7 +12,15 @@ export class ProdutoService {
   constructor(private http: HttpClient) { }
 
   salvar(produto: Produto): Observable<Produto> {
-    return this.http.post<Produto>(environment.apiUrl + '/produto/salvarProduto', produto);
+    return this.http.post<Produto>(environment.apiUrl + '/produto/salvarProduto', produto)
+  }
+
+  listar(): Observable<Produto[]> {
+    return this.http.get<Produto[]>(environment.apiUrl + '/produtos')
+  }
+
+  excluir(id: number): Observable<void> {
+    return this.http.delete<void>(`${environment.apiUrl}/${id}}`)
   }
 
 }

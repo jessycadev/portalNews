@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { Produto } from '../../models/produto';
+import { Produto } from '../models/produto';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
-import { ProdutoService } from '../../serivces/produto.service';
+import { ProdutoService } from '../services/produto.service';
+import { AppModule } from '../app.module';
 
 @Component({
   selector: 'app-produto',
-  imports:[FormsModule,ReactiveFormsModule],
+  imports:[AppModule, FormsModule, ReactiveFormsModule],
   templateUrl: './produto.component.html',
   styleUrl: './produto.component.css'
 })
