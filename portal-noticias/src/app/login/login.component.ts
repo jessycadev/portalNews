@@ -3,8 +3,7 @@ import { Router } from 'express';
 
 @Component({
   selector: 'app-login',
-  standalone: true,
-  imports: [],
+  standalone: false,
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
