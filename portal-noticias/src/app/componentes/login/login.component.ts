@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
-import { Router } from 'express';
 
 @Component({
   selector: 'app-login',
-  standalone: false,
   templateUrl: './login.component.html',
-  styleUrl: './login.component.css'
+  styleUrl: './login.component.css',
+  standalone: false
 })
 export class LoginComponent {
 

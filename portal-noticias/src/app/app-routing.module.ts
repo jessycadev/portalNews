@@ -1,6 +1,6 @@
 import { RouterModule, Routes } from "@angular/router";
 import { AppComponent } from "./app.component";
-import { CampanhaComponent } from "./campanha/campanha.component";
+import { CampanhaComponent } from "./componentes/campanha/campanha.component";
 import { NgModule } from "@angular/core";
 
 const routes: Routes = [

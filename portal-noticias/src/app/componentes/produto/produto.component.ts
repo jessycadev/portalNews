@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { Produto } from '../models/produto';
+import { Produto } from '../../models/produto';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
-import { ProdutoService } from '../services/produto.service';
-import { AppModule } from '../app.module';
+import { ProdutoService } from '../../services/produto.service';
+import { AppModule } from '../../app.module';
 
 @Component({
   selector: 'app-produto',
-  imports:[AppModule, FormsModule, ReactiveFormsModule],
   templateUrl: './produto.component.html',
-  styleUrl: './produto.component.css'
+  styleUrl: './produto.component.css',
+  standalone: false
 })
 export class ProdutoComponent implements OnInit {
 

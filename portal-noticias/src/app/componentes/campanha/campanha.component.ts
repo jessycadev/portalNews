@@ -2,9 +2,9 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-campanha',
-  imports: [],
   templateUrl: './campanha.component.html',
-  styleUrl: './campanha.component.css'
+  styleUrl: './campanha.component.css',
+  standalone: false
 })
 export class CampanhaComponent {
 
